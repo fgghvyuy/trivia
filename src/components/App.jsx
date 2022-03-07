@@ -3,12 +3,12 @@ import "../css/App.css";
 import data from "../sample_data.json";
 
 function App() {
-  console.log(data[0].question.text);
-  var questionNum = 0;
+  var questionNum = 1;
+  console.log(data[questionNum].question.text);
   return (
     <div className="app">
       Trivia!
-      <Question question="Question" />
+      <Question question={data[questionNum].question.text} />
     </div>
   );
 }
